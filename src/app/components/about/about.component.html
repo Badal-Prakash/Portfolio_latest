@@ -1,0 +1,97 @@
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="avatar-frame">
+          <div class="avatar-placeholder">
+            <img
+              src="assets/badal.png"
+              alt="Badal Narayan"
+              class="avatar-img"
+            />
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+        </div>
+        <div class="about-terminal glass-card">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">whoami.sh</span>
+          </div>
+          <div class="terminal-body">
+            <div class="term-line">
+              <span class="prompt">$</span> name:
+              <span class="val">"Badal Narayan"</span>
+            </div>
+            <div class="term-line">
+              <span class="prompt">$</span> role:
+              <span class="val">"Software Engineer"</span>
+            </div>
+            <div class="term-line">
+              <span class="prompt">$</span> location:
+              <span class="val">"Bengaluru, India"</span>
+            </div>
+            <div class="term-line">
+              <span class="prompt">$</span> coffee:
+              <span class="val">true</span>
+            </div>
+            <div class="term-line blink-line">
+              <span class="prompt">$</span> <span class="cursor">▌</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-tag">// about_me</span>
+        <h2 class="section-title" style="text-align: left; margin-bottom: 24px">
+          Building Things<br />That Matter
+        </h2>
+
+        <div class="about-text">
+          <p>
+            I'm a software engineer with a passion for solving complex problems
+            across the entire stack. From designing robust APIs in
+            <strong>.NET 9</strong> to crafting performant Angular frontends, I
+            care deeply about the craft of software.
+          </p>
+          <p>
+            I've shipped production systems handling millions of requests, built
+            dev tooling that saved teams hours weekly, and mentored engineers on
+            clean architecture principles. I believe in writing code that's not
+            just functional, but maintainable and elegant.
+          </p>
+        </div>
+
+        <div class="about-values">
+          @for (v of values; track v.icon) {
+            <div class="value-chip">
+              <span class="value-icon">{{ v.icon }}</span>
+              <span>{{ v.text }}</span>
+            </div>
+          }
+        </div>
+
+        <div class="about-actions">
+          <a href="/assets/resume.pdf" download class="btn-neon">
+            Download CV
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M8 2v8M4 8l4 4 4-4M2 14h12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

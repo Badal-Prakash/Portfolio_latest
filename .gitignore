@@ -1,0 +1,7 @@
+node_modules/
+.angular/
+dist/
+.DS_Store
+**/.DS_Store
+src/environments/environment.ts
+src/environments/environment.prod.ts

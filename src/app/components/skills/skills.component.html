@@ -1,0 +1,47 @@
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">// tech_stack</span>
+      <h2 class="section-title">Skills & Tools</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (group of skillGroups; track group.category) {
+        <div class="skill-group glass-card" #skillCard>
+          <div class="group-header">
+            <span class="group-icon">{{ group.icon }}</span>
+            <h3 class="group-category">{{ group.category }}</h3>
+          </div>
+          <div class="skill-list">
+            @for (skill of group.skills; track skill.name) {
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">{{ skill.name }}</span>
+                  <span class="skill-pct" [style.color]="skill.color"
+                    >{{ skill.level }}%</span
+                  >
+                </div>
+                <div class="skill-bar-bg">
+                  <div
+                    class="skill-bar-fill"
+                    [style.width.%]="skill.level"
+                    [style.background]="skill.color"
+                  ></div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="tool-belt">
+      <p class="tool-belt-label">Also proficient with</p>
+      <div class="tools-list">
+        @for (tool of tools; track tool) {
+          <span class="tool-pill">{{ tool }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>

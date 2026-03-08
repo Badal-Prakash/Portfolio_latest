@@ -1,0 +1,28 @@
+<nav [class.scrolled]="scrolled()">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">DEV</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+
+    <ul class="nav-links">
+      @for (item of navItems; track item.label) {
+        <li>
+          <a [href]="item.href" (click)="smoothScroll($event, item.href)">
+            <span class="nav-num">{{ item.num }}</span>
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <a
+      href="#contact"
+      class="nav-cta"
+      (click)="smoothScroll($event, '#contact')"
+    >
+      Hire Me
+    </a>
+  </div>
+</nav>
